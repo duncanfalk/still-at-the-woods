@@ -1,0 +1,17 @@
+.m-feature-box {
+    @include flex(column, nowrap, space-between, flex-start, flex-start);
+    gap: 1rem;
+    width: 100%;
+    flex: 0 1 calc(50% - (1rem / 2));
+    padding: 1.25rem;
+    background: rgba($white, 0.1);
+
+    p {
+        color: rgba($white, 0.7);
+    }
+
+    &__text {
+        @include flex(column, nowrap, flex-start, flex-start, flex-start);
+        gap: 0.25rem;
+    }
+}

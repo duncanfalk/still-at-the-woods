@@ -1,0 +1,63 @@
+.m-gallery-thumb {
+    @include layer();
+    @include flex(column, nowrap, space-between, center, center);
+    gap: 3rem;
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+    background: $forest center / cover no-repeat;
+
+    &::after {
+        content: "";
+        @include layer("base", 0, absolute);
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba($black, 0.6);
+    }
+
+    * {
+        @include layer("base", 1);
+    }
+
+    &--bed {
+        background-image: image-set(
+            url("../images/photo--bed-1.avif") type("image/avif"),
+            url("../images/photo--bed-1.webp") type("image/webp"),
+            url("../images/photo--bed-1.jpg") type("image/jpg")
+        );
+    }
+    &--dining-room {
+        background-image: image-set(
+            url("../images/photo--dining-room-2.avif") type("image/avif"),
+            url("../images/photo--dining-room-2.webp") type("image/webp"),
+            url("../images/photo--dining-room-2.jpg") type("image/jpg")
+        );
+    }
+    &--firepit {
+        background-image: image-set(
+            url("../images/photo--campfire.avif") type("image/avif"),
+            url("../images/photo--campfire.webp") type("image/webp"),
+            url("../images/photo--campfire.jpg") type("image/jpg")
+        );
+    }
+    &--living-room {
+        background-image: image-set(
+            url("../images/photo--living-room-1.avif") type("image/avif"),
+            url("../images/photo--living-room-1.webp") type("image/webp"),
+            url("../images/photo--living-room-1.jpg") type("image/jpg")
+        );
+    }
+    &--outdoors {
+        background-image: image-set(
+            url("../images/photo--front-door.avif") type("image/avif"),
+            url("../images/photo--front-door.webp") type("image/webp"),
+            url("../images/photo--front-door.jpg") type("image/jpg")
+        );
+    }
+
+    @include media("medium+") {
+        padding: 3rem;
+    }
+}

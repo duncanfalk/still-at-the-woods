@@ -1,0 +1,62 @@
+{
+    "name": "still-at-the-woods",
+    "version": "1.0.0",
+    "description": "Still at the Woods",
+    "babel": {
+        "presets": [
+            "@babel/preset-env"
+        ]
+    },
+    "postcss": {
+        "plugins": {
+            "autoprefixer": {
+                "grid": "no-autoplace"
+            }
+        }
+    },
+    "scripts": {
+        "dev": "webpack --watch --mode development",
+        "build": "webpack build --mode production"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://bitbucket.org/garrisonhughes/vertex-static-design-library.git"
+    },
+    "author": "GH Advertising",
+    "license": "ISC",
+    "private": true,
+    "bugs": {
+        "url": "https://bitbucket.org/garrisonhughes/vertex-static-design-library/issues"
+    },
+    "homepage": "https://bitbucket.org/garrisonhughes/vertex-static-design-library#readme",
+    "devDependencies": {
+        "@babel/core": "^7.21.8",
+        "@babel/preset-env": "^7.21.5",
+        "babel-loader": "^9.1.2",
+        "browser-sync": "^2.29.1",
+        "browser-sync-webpack-plugin": "^2.3.0",
+        "copy-webpack-plugin": "^11.0.0",
+        "css-loader": "^6.7.3",
+        "file-loader": "^6.2.0",
+        "image-minimizer-webpack-plugin": "^3.8.2",
+        "imagemin": "^8.0.1",
+        "imagemin-gifsicle": "^7.0.0",
+        "imagemin-jpegtran": "^7.0.0",
+        "imagemin-optipng": "^8.0.0",
+        "imagemin-svgo": "^10.0.1",
+        "mini-css-extract-plugin": "^2.7.5",
+        "postcss-loader": "^7.3.0",
+        "postcss-preset-env": "^8.3.2",
+        "sass": "^1.49.8",
+        "sass-loader": "^13.2.2",
+        "style-loader": "^3.3.2",
+        "webpack": "^5.82.0",
+        "webpack-cli": "^5.1.1"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-pro": "^6.4.0",
+        "jquery": "^3.6.4",
+        "jquery-validation": "^1.19.5",
+        "lodash": "^4.17.21"
+    }
+}

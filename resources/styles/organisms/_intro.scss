@@ -1,0 +1,42 @@
+.o-intro {
+    @include layer();
+    @include flex(column, nowrap, center, center, center);
+    gap: 5rem;
+    padding: 5rem $gutterSmall 2rem;
+    text-align: center;
+    background: $forest image-set(
+        url("../images/photo--fall-leaves.avif") type("image/avif"),
+        url("../images/photo--fall-leaves.webp") type("image/webp"),
+        url("../images/photo--fall-leaves.jpg") type("image/jpg")
+    ) center / cover no-repeat;
+
+    &::after {
+        content: "";
+        @include layer("base", 0, absolute);
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba($black, 0.6);
+    }
+
+    * {
+        @include layer("base", 1);
+    }
+
+    h1 {
+        @include fontBody($weight: 800);
+        text-transform: none;
+    }
+
+    h2 {
+        @include fontBody($weight: 600);
+        font-size: 2rem;
+        text-transform: none;
+    }
+
+    &__text {
+        @include flex(column, nowrap, center, center, center);
+        gap: 1rem;
+    }
+}

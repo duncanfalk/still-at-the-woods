@@ -1,0 +1,23 @@
+.o-amenities {
+    @include flex(column, nowrap, flex-start, flex-start, flex-start);
+    gap: 2rem;
+    background: $forest;
+    background: radial-gradient(ellipse at center top, $forest 0%, $black 150%);
+
+    &__body {
+        @include flex(column, nowrap, flex-start, flex-start, flex-start);
+        gap: 1rem;
+    }
+
+    &__intro {
+        @include flex(column, nowrap, flex-start, flex-start, flex-start);
+        gap: 1rem;
+    }
+
+    @include media("wide+") {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 4rem;
+    }
+}

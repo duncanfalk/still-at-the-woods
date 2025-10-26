@@ -1,0 +1,7 @@
+.m-highlight {
+    @include flex(row, nowrap, flex-start, center, center);
+    gap: 0.5rem;
+    flex: 0 1 100%;
+    padding: 1rem;
+    border: 1px solid $clay;
+}

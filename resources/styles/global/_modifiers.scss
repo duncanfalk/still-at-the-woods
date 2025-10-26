@@ -1,0 +1,78 @@
+@use "../../styles/global/bootstrap" as *;
+@use "sass:math";
+
+// animations
+.animate--bob {
+    @include layer();
+    animation: animateBob 2s linear infinite;
+
+    @keyframes animateBob {
+        0%, 100% {
+            bottom: 0;
+        }
+        50% {
+            bottom: 0.5rem;
+        }
+    }
+}
+
+// background
+.background--black {
+    background: $black;
+}
+.background--forest {
+    background: $forest;
+}
+.background--ways-to-stay {
+    @include layer();
+    background: $black image-set(
+        url("../images/photo--yard.avif") type("image/avif"),
+        url("../images/photo--yard.webp") type("image/webp"),
+        url("../images/photo--yard.jpg") type("image/jpg")
+    ) center / cover no-repeat;
+
+    &::after {
+        content: "";
+        @include layer("base", 0, absolute);
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba($black, 0.7);
+    }
+
+    * {
+        @include layer("base", 1);
+    }
+
+}
+
+// text color
+.text-color {
+    
+    &--neon {
+        color: $leaf;
+    }
+
+    &--silver {
+        color: $clay;
+    }
+
+    &--white {
+        color: $white;
+    }
+}
+
+// text style
+.text-style {
+
+    // italicized
+    &--italicized {
+        font-style: italic;
+    }
+
+    // uppercase
+    &--uppercase {
+        text-transform: uppercase;
+    }
+}

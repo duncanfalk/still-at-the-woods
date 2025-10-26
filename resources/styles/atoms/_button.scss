@@ -1,0 +1,22 @@
+.a-button {
+    @include flex(row, nowrap, flex-start, center, center);
+    gap: 0.25rem;
+    padding: 0.5rem;
+    @include fontHeading();
+    line-height: 1;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $forest;
+    background: $leaf;
+    border: 1px solid $leaf;
+    border-radius: 0.25rem;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+    @include transition(all, $transition-time);
+
+    &:focus,
+    &:hover {
+        background: $white;
+    }
+}

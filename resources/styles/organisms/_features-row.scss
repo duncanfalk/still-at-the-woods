@@ -1,0 +1,15 @@
+.o-features-row {
+    @include flex(column, nowrap, flex-start, flex-start, flex-start);
+    gap: 1rem;
+    width: 100%;
+
+    @include media("mobile+") {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch;
+    }
+    @include media("medium+") {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+}

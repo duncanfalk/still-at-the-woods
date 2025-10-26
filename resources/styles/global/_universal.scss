@@ -1,0 +1,38 @@
+// Universal styles
+
+html {
+    font-size: 18px;
+    background: $white;
+}
+
+body {
+    background: $white;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    display: block;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    line-height: 1.2;
+}
+
+section {
+    @include flex(column, nowrap, flex-start, center, center);
+    gap: 2rem;
+    padding: 2rem $gutterSmall;
+
+    @include media("tablet+") {
+        padding: 4rem $gutterLarge;
+    }
+}

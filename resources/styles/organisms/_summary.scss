@@ -1,0 +1,44 @@
+.o-summary {
+    @include flex(column, nowrap, flex-start, flex-start, flex-start);
+    gap: 2rem;
+    background: $white url("../images/bg--wood-pattern.jpg") center / cover no-repeat;
+
+    &__image {
+        width: 100%;
+
+        img,
+        picture {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            aspect-ratio: 16/10;
+        }
+    }
+
+    &__text {
+        @include flex(column, nowrap, flex-start, flext-start, flex-start);
+        gap: 1rem;
+    }
+
+    @include media("wide+") {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 4rem;
+
+        &__image {
+            order: 2;
+            flex: 0 1 45%;
+
+            img,
+            picture {
+                aspect-ratio: 16/14;
+            }
+        }
+
+        &__text {
+            order: 1;
+            flex: 0 1 55%;
+        }
+    }
+}

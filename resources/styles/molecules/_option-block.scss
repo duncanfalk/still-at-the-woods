@@ -1,0 +1,12 @@
+.m-option-block {
+    @include flex(column, nowrap, flex-start, center, center);
+    gap: 2rem;
+    flex: 0 1 100%;
+    padding: 2rem;
+    background: rgba($white, 0.92);
+
+    &__text {
+        @include flex(column, nowrap, flex-start, center, center);
+        gap: 0.5rem;
+    }
+}

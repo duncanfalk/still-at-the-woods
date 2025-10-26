@@ -1,0 +1,5 @@
+.o-highlight-row {
+    @include flex(row, nowrap, space-between, flex-start, stretch);
+    gap: 0.5rem;
+    width: 100%;
+}

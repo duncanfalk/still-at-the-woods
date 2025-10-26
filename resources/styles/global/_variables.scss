@@ -1,0 +1,74 @@
+// Base unit
+$unitBase: 16px;
+
+// Borders
+$borderWidth: 2px;
+
+// Breakpoints
+$breakpoints: (
+    "mini": (max-width: 390px),
+    "mini+": (min-width: 391px),
+    "mobile": (max-width: 600px),
+    "mobile+": (min-width: 601px),
+    "tablet": (max-width: 781px),
+    "tablet+": (min-width: 782px),
+    "medium": (max-width: 900px),
+    "medium+": (min-width: 901px),
+    "wide": (max-width: 1440px),
+    "wide+": (min-width: 1441px),
+    "extrawide": (max-width: 1660px),
+    "extrawide+": (min-width: 1661px),
+);
+
+// Colors
+$beige: #F7F0E5;
+$black: #000000;
+$clay: #9F7749;
+$tree: #375519;
+$forest: #1F270F;
+$leaf: #91C15D;
+$mint: #9FBC84;
+$white: #ffffff;
+
+// Columns
+$columnPadding: 16px;
+$columnWidth: 130px;
+
+// Container
+$containerWidth: 1560px;
+
+// Layers (z-index)
+$layers: (
+    sub: -10,
+    base: 0,
+    overlay: 10,
+    modal: 100,
+    max: 1000,
+);
+
+// Gutters
+$gutterSmall: 1.5rem;
+$gutterLarge: 5rem;
+
+// Spacing
+$line-height: 160%;
+$line-height-tight: 120%;
+$section-padding: 76px;
+$spacing: (
+    "0.125x": $unitBase * 0.125,
+    "0.25x": $unitBase * 0.25,
+    "0.5x": $unitBase * 0.5,
+    "0.75x": $unitBase * 0.75,
+    "1x": $unitBase * 1,
+    "1.5x": $unitBase * 1.5,
+    "2x": $unitBase * 2,
+    "2.5x": $unitBase * 2.5,
+    "5x": $unitBase * 5,
+    "7.5x": $unitBase * 7.5,
+    "10x": $unitBase * 10,
+    "20x": $unitBase * 20,
+);
+
+// Transitions
+$cubicBezier: 0.17, 0.67, 0.83, 0.67;
+$transition-time: 0.125s;

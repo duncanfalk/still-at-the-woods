@@ -1,0 +1,71 @@
+// Flex layout
+@mixin flex($direction: column, $wrap: wrap, $justify: center, $aligncontent: center, $alignitems: center) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+    align-content: $aligncontent;
+    align-items: $alignitems;
+}
+
+// Fonts
+
+// Funnel Sans, 0-1, 300-800
+@mixin fontBody($important: false, $style: normal, $weight: 400) {
+    @if $important {
+        font-family: "Funnel Sans", sans-serif !important;
+    } @else {
+        font-family: "Funnel Sans", sans-serif;
+    }
+    font-optical-sizing: auto;
+    font-weight: $weight;
+    font-style: $style;
+}
+
+// Roboto Condensed, 0-1, 100-900
+@mixin fontHeading($important: false, $weight: 700) {
+    @if $important {
+        font-family: "Roboto Condensed", sans-serif !important;
+    } @else {
+        font-family: "Roboto Condensed", sans-serif;
+    }
+    font-optical-sizing: auto;
+    font-weight: $weight;
+    font-style: normal;
+}
+
+// Font Awesome
+@mixin fa-brands {
+    font-family: "Font Awesome 6 Brands", monospace;
+    font-style: normal;
+    font-weight: 400;
+}
+@mixin fa-sharp($weight: 400) {
+    font-family: "Font Awesome 6 Sharp", monospace;
+    font-style: normal;
+    font-weight: $weight;
+}
+
+// Layers
+@mixin layer($name: "base", $modifier: 0, $position: relative) {
+    position: $position;
+    z-index: map-get($layers, $name) + $modifier;
+}
+
+// Media queries
+@mixin media($name) {
+
+    // If the key exists in the map
+    @if map-has-key($breakpoints, $name) {
+
+        // Prints a media query based on the value
+        @media #{inspect( map-get( $breakpoints, $name ) )} {
+            @content;
+        }
+    }
+}
+
+// Transition
+@mixin transition($prop: all, $time: $transition-time) {
+    transition: $prop $time cubic-bezier($cubicBezier);
+}
