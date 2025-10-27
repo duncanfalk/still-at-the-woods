@@ -97,7 +97,7 @@ h3 {
         letter-spacing: 0;
     }
     @include media("wide+") {
-        font-size: px2rem(45);
+        font-size: px2rem(38);
         line-height: calc(49 / 45);
     }
 }
@@ -107,15 +107,10 @@ h3 {
 h4 {
     font-size: px2rem(22);
     line-height: calc(28 / 22);
-    letter-spacing: -0.02rem;
 
     @include media("mobile+") {
-        line-height: calc(28 / 25);
-        letter-spacing: 0;
-    }
-    @include media("wide+") {
-        font-size: px2rem(31);
-        line-height: calc(35 / 31);
+        font-size: px2rem(26);
+        line-height: calc(26 / 25);
     }
 }
 

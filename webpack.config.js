@@ -16,6 +16,9 @@ const config = {
             path.resolve(__dirname, "/resources/scripts/core.js"),
             path.resolve(__dirname, "/resources/styles/core.scss"),
         ],
+        lightbox: [
+            path.resolve(__dirname, "/resources/scripts/lightbox.js"),
+        ]
     },
     output: {
         filename: "scripts/[name].js",
