@@ -4,4 +4,4 @@ import validate from "jquery-validation";
     $(() => {
         console.log(initMessage);
     });
-})(jQuery, "VERTEX static design library site up and running.");
+})(jQuery, "Still at the Woods site up and running.");

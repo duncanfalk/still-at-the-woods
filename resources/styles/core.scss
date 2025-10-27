@@ -7,12 +7,16 @@
 @import "global/modifiers";
 @import "global/universal";
 
+// Plugins
+@import "plugins/lightbox";
+
 // Atoms
 @import "atoms/button";
 
 // Molecules
 @import "molecules/contact-box";
 @import "molecules/feature-box";
+@import "molecules/gallery-structure";
 @import "molecules/gallery-thumb";
 @import "molecules/highlight";
 @import "molecules/option-block";
